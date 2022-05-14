@@ -11,7 +11,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
-import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
@@ -44,7 +43,7 @@ class Login : AppCompatActivity() {
 
 
 //            数据库读取
-            db.collection("users/doucument.id/first")
+            db.collection("users")
                 .whereEqualTo("first","dd")
                 .get()
 

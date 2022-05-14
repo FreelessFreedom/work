@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Work">
         <activity
+            android:name=".Firstpage"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="false"
             android:label="@string/title_activity_main"
@@ -22,7 +25,7 @@
             android:name=".Login"
             android:exported="false" />
         <activity
-            android:name=".Firstpage"
+            android:name=".NewActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
