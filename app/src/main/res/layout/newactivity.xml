@@ -8,10 +8,10 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="0dp"
-        android:layout_height="337dp"
-        android:layout_marginTop="72dp"
+        android:layout_width="415dp"
+        android:layout_height="0dp"
         android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/newactivity_submit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -20,6 +20,7 @@
             android:id="@+id/textView_a1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:padding="10dp"
             android:text="Project name:" />
 
         <EditText
@@ -34,6 +35,7 @@
             android:id="@+id/textView_a2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:padding="10dp"
             android:text="Deadline:" />
 
         <EditText
@@ -47,6 +49,66 @@
             android:hint="Choose your date"
             tools:inputType="date" />
 
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Task:" />
+
+        <LinearLayout
+            android:id="@+id/taskview"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/newactivity_task"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edit_inputstyle"
+                    android:ems="10"
+                    android:hint="Type the task"
+                    android:inputType="textPersonName" />
+
+                <Button
+                    android:id="@+id/newactivity_delete"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:backgroundTint="@color/white"
+                    app:icon="@android:drawable/ic_notification_clear_all"
+                    app:iconPadding="0dp"
+                    app:iconSize="50dp"
+                    app:iconTint="#EC5A5A" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/newactivity_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#EFEFEF"
+            android:text="Add"
+            android:textColor="#3F51B5"
+            android:textSize="20sp" />
+
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/newactivity_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="35dp"
+        android:text="@string/submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 </androidx.constraintlayout.widget.ConstraintLayout>

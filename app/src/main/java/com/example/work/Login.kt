@@ -31,7 +31,7 @@ class Login : AppCompatActivity() {
     }
 
 
-//数据库写入
+
     private fun test() {
         val  button = findViewById<Button>(R.id.test)
         val user = hashMapOf(
@@ -44,7 +44,7 @@ class Login : AppCompatActivity() {
 
 //            数据库读取
             db.collection("users")
-                .whereEqualTo("first","dd")
+                .whereEqualTo("first","Ada")
                 .get()
 
                 .addOnSuccessListener { result ->
